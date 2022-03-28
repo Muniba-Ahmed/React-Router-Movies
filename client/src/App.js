@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 //step 2: React Router imports
-import { Route, Link, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 //components used for the different routes
 import Movie from "./Movies/Movie";
@@ -46,10 +46,10 @@ export default function App() {
       />
 
       {/* <div>Step 4: Replace this Div with your Routes</div> */}
-      <Route path="/">
+      <Route exact path="/">
         <MovieList movies={movieList} />
       </Route>
-      <Route path="/movies/:id ">
+      <Route path="/movies/:id">
         <Movie />
       </Route>
     </div>
